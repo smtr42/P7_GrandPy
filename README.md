@@ -56,10 +56,10 @@ The goal is to learn about:
 * ![#c5f015](https://bit.ly/2wgCZTL) REST APIs,
 * ![#c5f015](https://bit.ly/2wgCZTL) Test Driven Development,
 * ![#c5f015](https://bit.ly/2wgCZTL) Agile development using Trello,
-* ![#c5f015](https://bit.ly/2wgCZTL) Flask Framework,
-* ![#c5f015](https://bit.ly/2wgCZTL) HTML / CSS,
-* ![#c5f015](https://bit.ly/2wgCZTL) Javascript & AJAX,
-* ![#c5f015](https://bit.ly/2wgCZTL) Heroku PaaS,
+* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Flask Framework,
+* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) HTML / CSS,
+* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Javascript & AJAX,
+* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Heroku PaaS,
 * ![#c5f015](https://bit.ly/2wgCZTL) Common good practices.
 
 Personal challenges and technical choices :
@@ -81,47 +81,20 @@ I use pipenv to manage dependencies.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/smtr42/P5_openfoodfact.git
+git clone https://github.com/smtr42/P7_GrandPy.git
 ```
 2. Install required dependencies
 ```sh
 pipenv install
 ```
-### Database creation
-The user must create himself the MySQL database. Open a MySQL Command Line Client.
-```sql
-CREATE DATABASE your-database-name CHARACTER SET 'utf8';
-```
+### Work in progress
 
-You must enter the name of the database in the file **configuration/constant.py** as well as your username and your password.
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) >
 
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) >
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) This a
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) >
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
-
-<!-- USAGE EXAMPLES -->
-## Usage
-Open a Command Line Interface and launch the main.py script with Python.
-```shell script
-python -m main
-```
-### Specifications
-
-When prompted, answer the question by typing the appropriate number or letter.
-For a first start you must download data from the API and reset the database. 
-Here is an example of usage :
-* Type "y" to donwload data
-* Type "y" to reset the database
-* Type "1" to search for food to substitute
-* Select a category
-* Select food
-* Select healthy food
-* You can either go back or save the food in the database for later use.
-<br>
-
-All along you can write "r" for going back, "q" to quit, "m" to go back to the first menu.
 ## Links
 * [French Stop Words](https://github.com/6/stopwords-json/blob/master/dist/fr.json)
 * [Flask](https://github.com/pallets/flask)
@@ -135,7 +108,7 @@ All along you can write "r" for going back, "q" to quit, "m" to go back to the f
 
 ## Authors
 
-* **Simonnet T** - *Initial work* - [smtr42](https://github.com/smtr42)
+* **Simonnet T** - [*Initial work*](https://github.com/smtr42) - [smtr42](https://github.com/smtr42)
    
   <a href="https://www.linkedin.com/in/teiva-s/">
    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" alt="linkedin" width="200" height="54">
