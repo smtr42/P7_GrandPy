@@ -7,6 +7,7 @@ import json
 import re
 import unicodedata as uc
 
+import config.config as cfg
 from logger.logger import logger
 
 logger.debug("test")
@@ -16,63 +17,85 @@ class Parser:
     """ Parse input data."""
 
     def __init__(self):
-        self.stop_word_list = []
+        self._stop_word_list = []
+        self.result = ""
 
-    # 1. lower_case
-    # 2. accent_removal
-    # 3. split_text_in_sentence
-    # 4. stop_word_removal
-    #
-    #
+    def process(self, raw_sentence):
 
-    def split_text_in_sentences(self, text: str) -> list:
-        """ Returns a list of string(multiple words) from input"""
-        if len(re.split(r"\?", text)) > 2:
-            return False
-        sentence_list = re.split(r"; |, |\*|! |\n", text)
-        return sentence_list
+        self._stop_word_list = self._get_keywords()
+        sentence_list = self._split_text_in_sentences(raw_sentence)
+        relevant_sentence = self._extract_relevant_info(sentence_list)
+        relevant_cleaned = self._special_removal(relevant_sentence)
+        self.result = self._stop_words_removal(relevant_cleaned,
+                                               self._stop_word_list)
+        return self.result
 
-    def accent_removal(self, text: str) -> str:
+    def _get_keywords(self):
+        """ Get the storpwords from the json files."""
+        word_list = []
+        try:
+            with open(cfg.STOP_WORD_PATH, encoding="utf-8") as file:
+                data = json.load(file)
+                for word in data:
+                    word = self._accent_removal(word)
+                    word_list.append(word)
+        except EOFError as EOF:
+            logger.error(
+                f"EOFError while opening the file {cfg.STOP_WORD_PATH} : {EOF}")
+        except IOError as e:
+            logger.error(
+                f"IOError while opening the file {cfg.STOP_WORD_PATH} : {e}")
+        except Exception as exc:
+            logger.error(
+                f"IOError while opening the file {cfg.STOP_WORD_PATH} : {exc}")
+        finally:
+            return word_list
+
+    def _split_text_in_sentences(self, text):
+        """Splits text in sentences to narrow the search"""
+        return re.split(r"; |, |\*|! |\n", text)
+
+    def _extract_relevant_info(self, sentence_list):
+        """ Search for localisation word to locate the relevant text."""
+        for sentence in sentence_list:
+            raw_relevant = re.findall(
+                r"(?=(" + '|'.join(cfg.key_localisation) + r"))",
+                sentence.lower())
+            if raw_relevant:
+                first_half, middle, second_half = sentence.rpartition(
+                    raw_relevant[-1])
+                for p in "?!.":
+                    if p in second_half:
+                        good, punctuation, to_delete = second_half.partition(p)
+                        return good
+                        break
+                    else:
+                        return second_half
+        return ""
+
+    def _accent_removal(self, text):
         """ Return a string without accent"""
         text = uc.normalize('NFKD', text).encode('ASCII', 'ignore').decode(
             'ASCII')
         return text.lower()
 
-    # TEST ?
-    def get_keywords(self):
-        self.stop_word_list = []
-        with open("data/fr.json", encoding="utf-8") as file:
-            data = json.load(file)
-            for word in data:
-                word = self.accent_removal(word)
-                lister.append(word)
-        return self.stop_word_list
+    def _special_removal(self, relevant_sentence):
+        """ Remove special characters and punctuation"""
+        de_accentized = self._accent_removal(relevant_sentence)
+        de_punctuated = re.sub('[!@#$?,:;.]', '', de_accentized)
+        de_apostrophed = re.sub(r'(\s|^)\w{1}\'', ' ', de_punctuated)
+        return de_apostrophed
 
-    def stop_words_removal(self, sentence_list):
-        relevant_word_list = []
-        for word in sentence_list:
-            if word not in self.stop_word_list:
-                relevant_word_list.append(word)
-        return relevant_word_list
+    def _stop_words_removal(self, relevant_cleaned, stop_word_list) -> str:
+        sentence = relevant_cleaned.split()
+        final = " ".join([word for word in sentence if
+                          word not in stop_word_list])
+        return final
 
 
-a = "Salut grandpy! Comment s'est passé ta soirée avec Grandma hier soir Au " \
-    "fait, pendant que j'y pense, pourrais-tu m'indiquer où se trouve le " \
-    "musée d'art et d'histoire de Fribourg, s'il te plaît? "
-b = "Bonsoir Grandpy, j'espère que tu as passé une belle semaine. Est-ce que " \
-    "tu pourrais m'indiquer l'adresse de la tour eiffel? Merci d'avance et " \
-    "salutations à Mamie. "
-c = "Salut GrandPy ! Par hasard, est-ce que tu connais l'adresse " \
-    "d'OpenClassrooms ?"
-d = "à être içi l'hôte sur une île"
-
-lister = [a, b, c, d]
-gr = Parser()
-# for i in lister:
-#     print(gr.accent_removal("elles-mêmes"))
-
-
-good = gr.accent_removal(a)
-good = gr.split_text_in_sentences(good)
-
-print(gr.stop_words_removal(good))
+if __name__ == "__main__":
+    instance = Parser()
+    i = "Bonsoir Grandpy, j'espère que tu as passé une belle semaine. Est-ce que " \
+        "tu pourrais m'indiquer l'adresse de la tour eiffel? Merci d'avance et " \
+        "salutations à Mamie. "
+    print("final process :", instance.process(i))
