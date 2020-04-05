@@ -53,18 +53,18 @@ The goal is to create an application that gives localisation from a place and re
 
 This project is the 7th assignment for the Python developer diploma from OpenClassrooms.
 The goal is to learn about:
-* REST APIs,
-* Test Driven Development,
-* Agile development using Trello,
-* Flask Framework,
-* HTML / CSS,
-* Javascript & AJAX,
-* Heroku PaaS,
-* Common good practices.
+* ![#c5f015](https://bit.ly/2wgCZTL) REST APIs,
+* ![#c5f015](https://bit.ly/2wgCZTL) Test Driven Development,
+* ![#c5f015](https://bit.ly/2wgCZTL) Agile development using Trello,
+* ![#c5f015](https://bit.ly/2wgCZTL) Flask Framework,
+* ![#c5f015](https://bit.ly/2wgCZTL) HTML / CSS,
+* ![#c5f015](https://bit.ly/2wgCZTL) Javascript & AJAX,
+* ![#c5f015](https://bit.ly/2wgCZTL) Heroku PaaS,
+* ![#c5f015](https://bit.ly/2wgCZTL) Common good practices.
 
 Personal challenges and technical choices :
-* Use logging
-* Not using Jquery or Bootstrap to learn basics
+* ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Use logging
+* ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Not using Jquery or Bootstrap to learn basics
 
 
 ### Functionality
@@ -95,6 +95,11 @@ CREATE DATABASE your-database-name CHARACTER SET 'utf8';
 
 You must enter the name of the database in the file **configuration/constant.py** as well as your username and your password.
 
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) This a
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
 
 <!-- USAGE EXAMPLES -->
 ## Usage
