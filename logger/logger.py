@@ -13,7 +13,7 @@ def setup_logger():
 
     file_handler = RotatingFileHandler('logger/log/activity.log',
                                        'a',
-                                       100000,
+                                       10000000,
                                        1
                                        )
 
