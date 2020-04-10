@@ -21,7 +21,6 @@ class Parser:
         self.result = ""
 
     def process(self, raw_sentence):
-
         self._stop_word_list = self._get_keywords()
         sentence_list = self._split_text_in_sentences(raw_sentence)
         relevant_sentence = self._extract_relevant_info(sentence_list)
