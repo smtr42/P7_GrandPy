@@ -15,3 +15,6 @@ key_localisation = ['endroit', 'adresse', 'rue', 'lieu', 'place',
                     'coordonnées', 'localiser', 'où sont', 'où est',
                     'localisation', 'indiquer', 'se trouve', 'où',
                     'se situe', ]
+
+GOOGLE_API_URL = "https://maps.googleapis.com/maps/api/geocode/json?"
+WIKI_API_URL = "https://fr.wikipedia.org/w/api.php?action="
