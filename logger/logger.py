@@ -26,7 +26,6 @@ def setup_logger():
     stream_handler.setFormatter(formatter)
     logger.addHandler(stream_handler)
 
-
     return logger, stream_handler
 
 
