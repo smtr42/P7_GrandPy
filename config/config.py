@@ -17,6 +17,21 @@ key_localisation = ['endroit', 'adresse', 'rue', 'lieu', 'place',
                     'se situe', ]
 
 GOOGLE_API_URL = "https://maps.googleapis.com/maps/api/geocode/json?"
-GOOGLE_API_KEY = ""
-WIKI_API_URL = "https://fr.wikipedia.org/w/api.php?action="
+WIKI_API_URL = "https://fr.wikipedia.org/w/api.php"
+WIKI_PAYLOAD = {
+    "action": "query",
+    "list": "search",
+    "srsearch": None,
+    "srlimit": "1",
+    "format": "json"
+}
 
+WIKI_EX_PAYLOAD = {
+    "action": "query",
+    "pageids": None,
+    "prop": "extracts",
+    "explaintext": "true",
+    "exsectionformat": "plain",
+    "exsentences": "3",
+    "format": "json"
+}

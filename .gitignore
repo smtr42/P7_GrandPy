@@ -128,5 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Custom
-.json
+# file: ~/.gitignore_global
+.DS_Store
+.idea
