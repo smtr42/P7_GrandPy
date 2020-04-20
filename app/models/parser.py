@@ -7,8 +7,8 @@ import json
 import re
 import unicodedata as uc
 
-import config.config as cfg
-from logger.logger import logger
+from app.config import config as cfg
+from app.logger.logger import logger
 
 logger.debug("test")
 
@@ -21,6 +21,7 @@ class Parser:
         self.result = ""
 
     def process(self, raw_sentence):
+        print("dans parser")
         self._stop_word_list = self._get_keywords()
         sentence_list = self._split_text_in_sentences(raw_sentence)
         relevant_sentence = self._extract_relevant_info(sentence_list)
@@ -30,7 +31,7 @@ class Parser:
         return self.result
 
     def _get_keywords(self):
-        """ Get the storpwords from the json files."""
+        """ Get the stopwords from the json files."""
         word_list = []
         try:
             with open(cfg.STOP_WORD_PATH, encoding="utf-8") as file:
@@ -67,7 +68,6 @@ class Parser:
                     if p in second_half:
                         good, punctuation, to_delete = second_half.partition(p)
                         return good
-                        break
                     else:
                         return second_half
         return ""

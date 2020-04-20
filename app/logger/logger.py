@@ -11,7 +11,7 @@ def setup_logger():
         '%(asctime)s [%(levelname)s] | File \"%(filename)s\" in \"%('
         'funcName)s\" line %(lineno)s: %(message)s')
 
-    file_handler = RotatingFileHandler('logger/log/activity.log',
+    file_handler = RotatingFileHandler('app/logger/log/activity.log',
                                        'a',
                                        10000000,
                                        1

@@ -9,7 +9,7 @@
 # WIKI_PAYLOAD = {"action":"query", "list":"search", "srsearch":"",
 #     "utf8":"", "format":"json"}
 
-STOP_WORD_PATH = "data/fr.json"
+STOP_WORD_PATH = "app/data/fr.json"
 
 key_localisation = ['endroit', 'adresse', 'rue', 'lieu', 'place',
                     'coordonnées', 'localiser', 'où sont', 'où est',

@@ -1,4 +1,4 @@
-from models.parser import Parser
+from parser import Parser
 
 
 class TestParser:

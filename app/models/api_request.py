@@ -3,8 +3,8 @@ import json
 
 import requests
 
-import config.config as cfg
-from logger.logger import logger
+from app.config import config as cfg
+from app.logger import logger
 
 logger.debug("test")
 
@@ -44,7 +44,7 @@ class GoogleRequest:
     def _get_api_key(self, api: str) -> str:
         key = None
         try:
-            with open("config/api_key.json") as file:
+            with open("app/config/api_key.json") as file:
                 data = json.load(file)
                 key = data["api"][api]
         except IOError as e:
@@ -77,15 +77,15 @@ class WikipediaRequest:
         resp_json = req.json()
         return resp_json["query"]["pages"][page_id]["extract"]
 
-    def api_request(self, keyword):
-        page_id = self._id_request(keyword)
+    def api_request(self):
+        page_id = self._id_request(self.query)
         extract = self._extract_request(page_id)
         return extract
 
 
 if __name__ == "__main__":
-    gr = GoogleRequest("tour eiffel")
-    a = gr.api_request()
-    print("geocode is :", a)
-    # w = WikipediaRequest("tour eiffel")
-    # print(w.id_request("tour eiffel"))
+    # gr = GoogleRequest("tour eiffel")
+    # a = gr.api_request()
+    # print("geocode is :", a)
+    w = WikipediaRequest("tour eiffel")
+    print(w.api_request())

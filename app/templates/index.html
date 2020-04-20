@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>OC GrandPy</title>
+        <meta charset="UTF-8">
+        <meta name="Simonnet">
+        <meta content="Projet d'apprentissage lors du parcours de développeur Python d'Openclassrooms">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+
+<!--        <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">-->
+    </head>
+    <body>
+        <header>
+<!--            <img src="../static/img/logo.png" alt="GrandPy P7 OC"/>-->
+        </header>
+        <main>
+            <h1>Bienvenue p'tit jeune</h1>
+            <h2>Demande moi le nom d'un lieu et je te donne l'adresse et une anecdote !</h2>
+            <div class="chat">
+                <div class="chat-history">
+                    <ul>
+                        <li >
+                            <div class="message-head">
+                                <span class="message-name"> Moi</span>
+                            </div>
+                            <div class="message me">
+                                Bonjour, où se situe la tour Eiffel ?
+                            </div>
+                        </li>
+                        <li >
+                            <div class="message-head">
+                                <span class="message-name"> GrandPy</span>
+                            </div>
+                            <div class="message grand">
+                                Elle se situe ici. J'ai une anecdote : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="question-box">
+<!--                    <textarea name="message-content" id="message-content" placeholder ="Pose ta question içi" rows="3"></textarea>-->
+<!--                    <button>Demander</button>-->
+                    <form id="user-form">
+                        <input type="text" id="message-content" class="message-content" name="message-content" placeholder=" Pose ta question içi">
+                        <input type="submit" class= "button" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+            <div id="map">
+            </div>
+        </main>
+        <footer>
+            <p>Teiva SIMONNET</p>
+            <a href="https://github.com/smtr42/">Github</a>
+        </footer>
+    </body>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3FXvcENC92U8Xf3mAZ-KxO290J7XPCgQ&callback=initMap">
+    </script>
+    <script type="text/javascript" src="../static/js/script.js"></script>
+</html>

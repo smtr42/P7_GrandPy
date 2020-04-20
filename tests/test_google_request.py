@@ -1,6 +1,5 @@
 import requests
-from models.api_request import GoogleRequest
-from models.api_request import WikipediaRequest
+from app.models import GoogleRequest
 
 
 class MockResponse:
@@ -23,7 +22,4 @@ class TestGoogleRequest:
         assert self.app.api_request() is not (None, None)
 
 
-class TestWikipediaRequest:
 
-    def setup_method(self):
-        pass

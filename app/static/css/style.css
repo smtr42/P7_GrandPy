@@ -1,0 +1,98 @@
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,700);*/
+
+/*#C5DDEB*/
+
+body {
+    background: #94C2ED;
+    color: #FFF;
+    /*font: 14px/20px Arial, sans-serif;*/
+    text-align: center;
+    margin: 0;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+.chat {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background: #F2F5F8;
+    color: #434651;
+}
+
+.chat-history {
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid white;
+    overflow-y: scroll;
+    height: 575px;
+}
+
+.message-head {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.message {
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 7px;
+    /*margin-bottom: 30px;*/
+    width: 90%;
+    position: relative;
+}
+
+.me {
+    background: #86BB71;
+}
+
+.grand {
+    background: #94c2ed;
+}
+
+.question-box {
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+textarea {
+    width: 80%;
+    border: none;
+    padding: 10px 20px;
+    font: 14px/22px "Lato", Arial, sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+    position: relative;
+}
+
+.message-content {
+    position: relative;
+
+    width: 95%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+button, .button {
+    float: right;
+    color: #94C2ED;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #F2F5F8;
+    padding-top: 8px;
+}
+
+#map {
+    height: 300px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+
