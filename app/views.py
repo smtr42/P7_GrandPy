@@ -16,8 +16,7 @@ def get_content():
     user_text = request.form["message-content"]
     clean_text = parser.process(user_text)
     clean_text = {"response": clean_text}
-    print("dans route ajax")
-    print(clean_text)
+    print(jsonify(clean_text))
     return jsonify(clean_text)
 
 # Bonjour GrandPy, où se strouve la tour Eiffel, s'il te plaît ?

@@ -1,27 +1,23 @@
+console.log("sre efg")
+
 let form = document.querySelector("#user-form");
 
-// function postFormData(url, data) {
-//     return fetch(url, {
-//         method: "POST",
-//         body: data
-//     })
-//         .then(response => response.json())
-//         .catch(error => console.log(error));
-// }
-
-form.addEventListener("submit", function (event) {
-    // prevent default behavior of form
-    event.preventDefault();
-    // postFormData("/ajax", new FormData(form))
-    //     .then(response => {
-    //         console.log(response);
-    //     })
-    fetch ('/ajax', {
+function postFormData(url, data) {
+    return fetch(url, {
         method: "POST",
-        body: new FormData(form)
+        body: data
     })
         .then(response => response.json())
         .catch(error => console.log(error));
+}
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    postFormData("/ajax", new FormData(form))
+        .then(response => {
+            console.log(response);
+        })
 })
 
 function initMap() {
