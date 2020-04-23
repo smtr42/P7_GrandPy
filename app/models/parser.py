@@ -18,16 +18,17 @@ class Parser:
 
     def __init__(self):
         self._stop_word_list = []
-        self.result = ""
+        self.result = {}
 
-    def process(self, raw_sentence):
-        print("dans parser")
+    def process(self, raw_sentence: str) -> dict:
+        """Get the """
         self._stop_word_list = self._get_keywords()
         sentence_list = self._split_text_in_sentences(raw_sentence)
         relevant_sentence = self._extract_relevant_info(sentence_list)
         relevant_cleaned = self._special_removal(relevant_sentence)
-        self.result = self._stop_words_removal(relevant_cleaned,
-                                               self._stop_word_list)
+        self.result["input_loc"] = self._stop_words_removal(relevant_cleaned,
+                                                            self._stop_word_list)
+        self.result["input_raw"] = raw_sentence
         return self.result
 
     def _get_keywords(self):

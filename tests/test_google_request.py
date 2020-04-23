@@ -1,5 +1,5 @@
 import requests
-from app.models import GoogleRequest
+from app.models.api_request import GoogleRequest
 
 
 class MockResponse:
@@ -13,13 +13,13 @@ class MockResponse:
 class TestGoogleRequest:
 
     def setup_method(self):
-        self.app = GoogleRequest("tour eiffel")
+        self.app = GoogleRequest()
 
     def test_google_api_request(self, monkeypatch):
         def mock_get(url, *args, **kwargs):
             return MockResponse()
         monkeypatch.setattr(requests, "get", mock_get)
-        assert self.app.api_request() is not (None, None)
+        assert self.app.api_request("tour eiffel") is not (None, None)
 
 
 

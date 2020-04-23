@@ -1,10 +1,11 @@
 """ This will handle any API request."""
 import json
+import random
 
 import requests
 
 from app.config import config as cfg
-from app.logger import logger
+from app.logger.logger import logger
 
 logger.debug("test")
 
@@ -12,24 +13,29 @@ logger.debug("test")
 class GoogleRequest:
     """Will handle the request for Google API."""
 
-    def __init__(self, query):
+    def __init__(self):
         self.url = cfg.GOOGLE_API_URL
         self.key = None
-        self.query = query.split()
-        self.query = "+".join(self.query)
 
-    def api_request(self):
+    def api_request(self, data: dict) -> dict:
+        query = data["input_loc"]
+        query = query.split()
+        query = "+".join(query)
+
         self.key = self._get_api_key("google")
-        url = f"{self.url}address={self.query}&key={self.key}"
-        lat, lon = None, None
+
+        url = f"{self.url}address={query}&key={self.key}"
+        result = {"address": None, "lat": None, "lon": None}
         try:
-            logger.info(f"Handling google API request {self.query}")
+            logger.info(f"Handling google API request {query}")
             req = requests.get(url)
             resp_json = req.json()
-            lat = resp_json['results'][0]['geometry']['location'][
+            result["lat"] = resp_json['results'][0]['geometry']['location'][
                 'lat']
-            lon = resp_json['results'][0]['geometry']['location'][
+            result["lon"] = resp_json['results'][0]['geometry']['location'][
                 'lng']
+            result["address"] = resp_json['results'][0]["formatted_address"]
+
             logger.info(f"Return google API result")
         except requests.exceptions.HTTPError as http_err:
             logger.error(f"Exception HTTPError : {http_err}")
@@ -39,7 +45,8 @@ class GoogleRequest:
             logger.error(f"Exception Timeout : {tmout_err}")
         except requests.exceptions.RequestException as err:
             logger.error(f"Unknown Error: {err}")
-        return lat, lon
+        result = {**data, **result}
+        return result
 
     def _get_api_key(self, api: str) -> str:
         key = None
@@ -60,32 +67,40 @@ class GoogleRequest:
 
 class WikipediaRequest:
     # https://www.mediawiki.org/wiki/API:Search#API_documentation
-    def __init__(self, query):
-        self.query = query
-
-    def _id_request(self, keyword):
-        payload = cfg.WIKI_PAYLOAD
-        payload["srsearch"] = keyword
+    def _id_geo_request(self, data: dict):
+        lat, lon = round(data["lat"], 7), round(data["lon"], 7)
+        # "gscoord": "37.7891838|-122.4033522"
+        payload = cfg.WIKI_GEO_PAYLOAD
+        payload["gscoord"] = f"{lat}|{lon}"
         req = requests.get(cfg.WIKI_API_URL, params=payload)
         resp_json = req.json()
-        return str(resp_json["query"]["search"][0]["pageid"])
+        place = random.choice(resp_json["query"]["geosearch"])
+        data["pageid"] = place["pageid"]
+        return data
 
-    def _extract_request(self, page_id):
+    def _extract_request(self, data: dict) -> dict:
+        pageid = data["pageid"]
         payload = cfg.WIKI_EX_PAYLOAD
-        payload["pageids"] = page_id
+        payload["pageids"] = pageid
         req = requests.get(cfg.WIKI_API_URL, params=payload)
         resp_json = req.json()
-        return resp_json["query"]["pages"][page_id]["extract"]
+        print(resp_json)
+        data["page_id_article"] = resp_json["query"]["pages"][str(pageid)][
+            "extract"]
+        return data
 
-    def api_request(self):
-        page_id = self._id_request(self.query)
-        extract = self._extract_request(page_id)
-        return extract
+    def api_request(self, data: dict) -> dict:
+        data = self._id_geo_request(data)
+        data = self._extract_request(data)
+        return data
 
 
 if __name__ == "__main__":
     # gr = GoogleRequest("tour eiffel")
     # a = gr.api_request()
     # print("geocode is :", a)
-    w = WikipediaRequest("tour eiffel")
-    print(w.api_request())
+    # g = GoogleRequest()
+    h = {"input_loc": "tour eiffel", "lat":48.85837009999999, "lon":2.2944813 }
+    # print(g.api_request(h))
+    w = WikipediaRequest()
+    print(w.api_request(h))

@@ -1,8 +1,6 @@
 """Main views for the flask app."""
 from app import flask_app, render_template, jsonify, request
-from app.models.parser import Parser
-
-parser = Parser()
+from app.models.core import Core
 
 
 @flask_app.route('/')
@@ -13,10 +11,9 @@ def index():
 
 @flask_app.route('/ajax', methods=["POST"])
 def get_content():
-    user_text = request.form["message-content"]
-    clean_text = parser.process(user_text)
-    clean_text = {"response": clean_text}
-    print(jsonify(clean_text))
-    return jsonify(clean_text)
+    text_input = request.form["message-content"]
+    core = Core()
+    payload = core.process(text_input)
+    return jsonify(payload)
 
-# Bonjour GrandPy, où se strouve la tour Eiffel, s'il te plaît ?
+# Bonjour GrandPy, où se trouve la tour Eiffel, s'il te plaît ?

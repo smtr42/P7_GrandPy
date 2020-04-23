@@ -25,7 +25,14 @@ WIKI_PAYLOAD = {
     "srlimit": "1",
     "format": "json"
 }
-
+WIKI_GEO_PAYLOAD = {
+    "format": "json",
+    "list": "geosearch",
+    "gscoord": "",
+    "gslimit": "10",
+    "gsradius": "10000",
+    "action": "query"
+}
 WIKI_EX_PAYLOAD = {
     "action": "query",
     "pageids": None,

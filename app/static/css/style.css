@@ -10,7 +10,9 @@ body {
     margin: 0;
 
 }
-
+h1, h2 {
+    text-align: center;
+}
 li {
     list-style-type: none;
 }
@@ -25,10 +27,15 @@ li {
 }
 
 .chat-history {
-    padding: 30px 30px 20px;
+    padding: 30px 30px 20px 5px;
     border-bottom: 2px solid white;
     overflow-y: scroll;
-    height: 575px;
+    height: 400px;
+}
+
+#map {
+    height: 280px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
 }
 
 .message-head {
@@ -90,9 +97,6 @@ button, .button {
     padding-top: 8px;
 }
 
-#map {
-    height: 300px; /* The height is 400 pixels */
-    width: 100%; /* The width is the width of the web page */
-}
+
 
 
