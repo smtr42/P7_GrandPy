@@ -1,13 +1,11 @@
-# # Google Maps API basis
-# MAP_API_KEY = os.environ['MAP_API_KEY']
-# MAP_URL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
-# MAP_PAYLOAD = {"input":"", "inputtype":"textquery",
-#     "fields":"formatted_address,name,geometry", "key": MAP_API_KEY}
-#
-# # Wikipedia API basis
-# WIKI_URL = "https://fr.wikipedia.org/w/api.php"
-# WIKI_PAYLOAD = {"action":"query", "list":"search", "srsearch":"",
-#     "utf8":"", "format":"json"}
+from dotenv import load_dotenv, find_dotenv
+from os import getenv
+
+
+def load_key():
+    load_dotenv(find_dotenv())
+    API_KEY = getenv('google_api')
+    return API_KEY
 
 STOP_WORD_PATH = "app/data/fr.json"
 
@@ -40,5 +38,13 @@ WIKI_EX_PAYLOAD = {
     "explaintext": "true",
     "exsectionformat": "plain",
     "exsentences": "3",
+    "format": "json"
+}
+
+WIKI_URL_PAYLOAD = {
+    "action": "query",
+    "prop": "info",
+    "pageids": None,
+    "inprop": "url|talkid",
     "format": "json"
 }

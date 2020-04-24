@@ -1,5 +1,5 @@
 """ This will handle any API request."""
-import json
+
 import random
 
 import requests
@@ -7,23 +7,23 @@ import requests
 from app.config import config as cfg
 from app.logger.logger import logger
 
-logger.debug("test")
-
 
 class GoogleRequest:
     """Will handle the request for Google API."""
 
     def __init__(self):
         self.url = cfg.GOOGLE_API_URL
-        self.key = None
+        self.key = cfg.load_key()
 
     def api_request(self, data: dict) -> dict:
+        """The main public method : handle the input and return all
+         geo data associated.
+         """
+
         query = data["input_loc"]
         query = query.split()
         query = "+".join(query)
-
-        self.key = self._get_api_key("google")
-
+        # self.key = self._get_api_key("google")
         url = f"{self.url}address={query}&key={self.key}"
         result = {"address": None, "lat": None, "lon": None}
         try:
@@ -48,28 +48,13 @@ class GoogleRequest:
         result = {**data, **result}
         return result
 
-    def _get_api_key(self, api: str) -> str:
-        key = None
-        try:
-            with open("app/config/api_key.json") as file:
-                data = json.load(file)
-                key = data["api"][api]
-        except IOError as e:
-            logger.error(f"IOError Opening Key file {e}")
-        except ValueError as e:
-            logger.error(f"ValueError Opening Key file {e}")
-        except EOFError as e:
-            logger.error(f"EOFError Opening Key file {e}")
-        except Exception as e:
-            logger.error(f"Exception Opening Key file {e}")
-        return key
-
 
 class WikipediaRequest:
     # https://www.mediawiki.org/wiki/API:Search#API_documentation
     def _id_geo_request(self, data: dict):
+        """Return a random pageid from places around given geo coordinates."""
+
         lat, lon = round(data["lat"], 7), round(data["lon"], 7)
-        # "gscoord": "37.7891838|-122.4033522"
         payload = cfg.WIKI_GEO_PAYLOAD
         payload["gscoord"] = f"{lat}|{lon}"
         req = requests.get(cfg.WIKI_API_URL, params=payload)
@@ -79,28 +64,46 @@ class WikipediaRequest:
         return data
 
     def _extract_request(self, data: dict) -> dict:
+        """Return an desription of the place from the pageid and its url."""
+
         pageid = data["pageid"]
         payload = cfg.WIKI_EX_PAYLOAD
         payload["pageids"] = pageid
         req = requests.get(cfg.WIKI_API_URL, params=payload)
         resp_json = req.json()
-        print(resp_json)
         data["page_id_article"] = resp_json["query"]["pages"][str(pageid)][
             "extract"]
         return data
 
+    def _url_request(self, data: dict) -> dict:
+        """Get the url from the associated pageid."""
+
+        pageid = data["pageid"]
+        payload = cfg.WIKI_URL_PAYLOAD
+        payload["pageids"] = pageid
+        req = requests.get(cfg.WIKI_API_URL, params=payload)
+        resp_json = req.json()
+        data["url"] = resp_json["query"]["pages"][str(pageid)][
+            "fullurl"]
+        return data
+
     def api_request(self, data: dict) -> dict:
+        """Public method gathering each mediawiki data."""
+
         data = self._id_geo_request(data)
         data = self._extract_request(data)
+        data = self._url_request(data)
         return data
 
 
 if __name__ == "__main__":
-    # gr = GoogleRequest("tour eiffel")
-    # a = gr.api_request()
-    # print("geocode is :", a)
-    # g = GoogleRequest()
-    h = {"input_loc": "tour eiffel", "lat":48.85837009999999, "lon":2.2944813 }
-    # print(g.api_request(h))
-    w = WikipediaRequest()
-    print(w.api_request(h))
+    r = {"input_loc": "tour eiffel", "lat": 48.85837009999999,
+         "lon": 2.2944813}
+    k = GoogleRequest()
+    print(k.api_request(r))
+
+    #
+    # h = {"input_loc": "tour eiffel", "lat": 48.85837009999999,
+    #      "lon": 2.2944813}
+    # w = WikipediaRequest()
+    # print(w.api_request(h))
