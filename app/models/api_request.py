@@ -19,32 +19,40 @@ class GoogleRequest:
         """The main public method : handle the input and return all
          geo data associated.
          """
-
         query = data["input_loc"]
         query = query.split()
         query = "+".join(query)
-        # self.key = self._get_api_key("google")
         url = f"{self.url}address={query}&key={self.key}"
-        result = {"address": None, "lat": None, "lon": None}
+        result = {"address": None, "lat": 43.1, "lon": 6.1}
         try:
             logger.info(f"Handling google API request {query}")
             req = requests.get(url)
             resp_json = req.json()
-            result["lat"] = resp_json['results'][0]['geometry']['location'][
-                'lat']
-            result["lon"] = resp_json['results'][0]['geometry']['location'][
-                'lng']
-            result["address"] = resp_json['results'][0]["formatted_address"]
+            if resp_json["status"] != "INVALID_REQUEST":
+                result["lat"] = resp_json['results'][0]['geometry']['location'][
+                    'lat']
+                result["lon"] = resp_json['results'][0]['geometry']['location'][
+                    'lng']
+                result["address"] = resp_json['results'][0]["formatted_address"]
+                logger.info(f"Return google API result : {result}")
+            else:
+                data["error"] = True
 
-            logger.info(f"Return google API result")
         except requests.exceptions.HTTPError as http_err:
             logger.error(f"Exception HTTPError : {http_err}")
+            result["error"] = True
         except requests.exceptions.ConnectionError as conn_err:
             logger.error(f"Exception Connection Error {conn_err}")
+            result["error"] = True
         except requests.exceptions.Timeout as tmout_err:
             logger.error(f"Exception Timeout : {tmout_err}")
+            result["error"] = True
         except requests.exceptions.RequestException as err:
             logger.error(f"Unknown Error: {err}")
+            result["error"] = True
+        except IndexError as ie:
+            logger.info(f"No coordinate found : {result}")
+            result["error"] = True
         result = {**data, **result}
         return result
 
@@ -89,11 +97,13 @@ class WikipediaRequest:
 
     def api_request(self, data: dict) -> dict:
         """Public method gathering each mediawiki data."""
-
-        data = self._id_geo_request(data)
-        data = self._extract_request(data)
-        data = self._url_request(data)
-        return data
+        if data["error"]:
+            return data
+        else:
+            data = self._id_geo_request(data)
+            data = self._extract_request(data)
+            data = self._url_request(data)
+            return data
 
 
 if __name__ == "__main__":
@@ -102,8 +112,3 @@ if __name__ == "__main__":
     k = GoogleRequest()
     print(k.api_request(r))
 
-    #
-    # h = {"input_loc": "tour eiffel", "lat": 48.85837009999999,
-    #      "lon": 2.2944813}
-    # w = WikipediaRequest()
-    # print(w.api_request(h))

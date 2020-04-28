@@ -18,10 +18,24 @@ class Parser:
 
     def __init__(self):
         self._stop_word_list = []
-        self.result = {}
+        self.result = {"error": False,
+                       "input_raw": "",
+                       "input_loc": "",
+                       "formatted_message": "",
+                       "no_result": "Désolé, je n'ai pas compris ta demande"
+                                    " ou je ne connais pas ce lieu."
+                                    " Try again !",
+                       "lat": 43.1,
+                       "lon": 6.3,
+                       "address": "",
+                       "pageid": None,
+                       "page_id_article": None,
+                       "url": "",
+                       }
 
     def process(self, raw_sentence: str) -> dict:
         """Get the """
+        self.result["error"] = False
         self._stop_word_list = self._get_keywords()
         sentence_list = self._split_text_in_sentences(raw_sentence)
         relevant_sentence = self._extract_relevant_info(sentence_list)
@@ -96,6 +110,6 @@ class Parser:
 if __name__ == "__main__":
     instance = Parser()
     i = "Bonsoir Grandpy, j'espère que tu as passé une belle semaine. Est-ce que " \
-        "tu pourrais m'indiquer l'adresse de la tour eiffel? Merci d'avance et " \
+        "tu pourrais m'indiquer l'adresse de la tour eiffel ? Merci d'avance et " \
         "salutations à Mamie. "
     print("final process :", instance.process(i))

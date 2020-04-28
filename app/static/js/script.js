@@ -1,5 +1,6 @@
 let form = document.querySelector("#user-form");
 let chatHistory = document.querySelector('.chat-history')
+let body = document.querySelector('body')
 let map;
 
 
@@ -37,23 +38,21 @@ function postFormData(url, data) {
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+    body.classList.add("wait")
     postFormData("/ajax", new FormData(form))
 
         .then(function(response) {
             console.log(response)
             writeLine("me", response.input_raw)
-            let text = "Ca se situe là : " + response.address + ". Je t'ai déjà raconté cette anecdote ? " + response.page_id_article + ". Pour en savoir plus regarde cette adresse : " + response.url
-            writeLine("grand", text)
+            if (response.error) {
+                writeLine("grand", response.no_result)
+            } else {
+                writeLine("grand", response.formatted_message)
+            }
+            // writeLine("grand", response.formatted_message)
             let latitude = response.lat
             let longitude = response.lon
-            console.log(response.lat, response.lon)
+            body.classList.remove('wait')
             initMap(latitude, longitude);
         })
-
-        // .then(response => {
-        //     console.log(response)
-        //     writeLine("me", response.input_raw)
-        //     let text = "Ca se situe là : " + response.address + ". Je t'ai déjà raconté cette anecdote ? " + response.page_id_article + ". Pour en savoir plus regarde cette adresse : " + response.url
-        //     writeLine("grand", text);
-        // })
 })

@@ -1,12 +1,16 @@
 """Main views for the flask app."""
 from app import flask_app, render_template, jsonify, request
 from app.models.core import Core
+from app.config import config as cfg
 
 
 @flask_app.route('/')
 @flask_app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", API_KEY=cfg.load_key())
+
+# api_key = retouver depuis le env
+# render_template("index.html",API_KEY=api_key)
 
 
 @flask_app.route('/ajax', methods=["POST"])

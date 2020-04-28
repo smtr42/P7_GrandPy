@@ -1,11 +1,13 @@
-from dotenv import load_dotenv, find_dotenv
 from os import getenv
+
+from dotenv import load_dotenv, find_dotenv
 
 
 def load_key():
     load_dotenv(find_dotenv())
     API_KEY = getenv('google_api')
     return API_KEY
+
 
 STOP_WORD_PATH = "app/data/fr.json"
 
@@ -23,6 +25,7 @@ WIKI_PAYLOAD = {
     "srlimit": "1",
     "format": "json"
 }
+
 WIKI_GEO_PAYLOAD = {
     "format": "json",
     "list": "geosearch",
@@ -31,6 +34,7 @@ WIKI_GEO_PAYLOAD = {
     "gsradius": "10000",
     "action": "query"
 }
+
 WIKI_EX_PAYLOAD = {
     "action": "query",
     "pageids": None,
@@ -48,3 +52,15 @@ WIKI_URL_PAYLOAD = {
     "inprop": "url|talkid",
     "format": "json"
 }
+
+START_SENTENCE = ["Alors voilà l'adresse mon ptit gars : ",
+                  "Ah ça y est je me souviens c'est ici : ",
+                  "Mmhh, voyons voir ça devrait être ici : ",
+                  "Très bonne question, l'adresse est ici : ",
+                  ]
+
+STORY_SENTENCE = ["Au fait, je t'ai raconté mon anecdote près de là ? ",
+                  "Ah ça me rappel cet endroit pas très loin. ",
+                  "Y a cet endroit sympa tout proche de là je me souviens. ",
+                  "Oh mais il y a ce lieu à ne pas manquer à deux pas de là. "]
+
