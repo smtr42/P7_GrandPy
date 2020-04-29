@@ -4,24 +4,22 @@ from app.logger.logger import logger
 
 
 def load_key():
-    try:
-        load_dotenv(find_dotenv())
-        API_KEY = os.getenv('google_api')
-        logger.info(f"Asked for local env {API_KEY}")
-        return API_KEY
-    except:
+    load_dotenv(find_dotenv())
+    API_KEY = os.getenv('google_api')
+    if API_KEY == None:
         API_KEY = os.environ["GOOGLE_API_KEY"]
-        logger.info(f"Asked for heroku env {API_KEY}")
+        return API_KEY
+    else:
         return API_KEY
 
 
 def load_front_key():
-    try:
-        load_dotenv(find_dotenv())
-        FRONT_API_KEY = os.getenv('FRONT_API_KEY')
-        return FRONT_API_KEY
-    except:
+    load_dotenv(find_dotenv())
+    FRONT_API_KEY = os.getenv('FRONT_API_KEY')
+    if FRONT_API_KEY == None:
         FRONT_API_KEY = os.environ["FRONT_API_KEY"]
+        return FRONT_API_KEY
+    else:
         return FRONT_API_KEY
 
 
