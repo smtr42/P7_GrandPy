@@ -1,14 +1,17 @@
 import os
 from dotenv import load_dotenv, find_dotenv
+from app.logger.logger import logger
 
 
 def load_key():
     try:
         load_dotenv(find_dotenv())
         API_KEY = os.getenv('google_api')
+        logger.info(f"Asked for local env {API_KEY}")
         return API_KEY
     except:
         API_KEY = os.environ["GOOGLE_API_KEY"]
+        logger.info(f"Asked for heroku env {API_KEY}")
         return API_KEY
 
 
