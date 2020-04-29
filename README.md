@@ -31,8 +31,8 @@
 
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
-* [Usage](#usage)
-* [Contact](#contact)
+* [Links](#links)
+* [Authors](#authors)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
