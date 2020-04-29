@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-""" Main module to run the the app"""
+""" Main module to run the the app."""
 
 from app import flask_app
 
 
 def run():
-    """ Run the flask app"""
+    """ Run the flask app."""
+
     flask_app.run(debug=True)
 
 

@@ -1,12 +1,14 @@
 import os
 from dotenv import load_dotenv, find_dotenv
-from app.logger.logger import logger
 
 
 def load_key():
+    """ Return the environment variable for google api either from local
+     or Heroku"""
+
     load_dotenv(find_dotenv())
     API_KEY = os.getenv('google_api')
-    if API_KEY == None:
+    if API_KEY is None:
         API_KEY = os.environ["GOOGLE_API_KEY"]
         return API_KEY
     else:
@@ -14,9 +16,12 @@ def load_key():
 
 
 def load_front_key():
+    """ Return the environment variable for the front map either from local
+     or Heroku"""
+
     load_dotenv(find_dotenv())
     FRONT_API_KEY = os.getenv('FRONT_API_KEY')
-    if FRONT_API_KEY == None:
+    if FRONT_API_KEY is None:
         FRONT_API_KEY = os.environ["FRONT_API_KEY"]
         return FRONT_API_KEY
     else:

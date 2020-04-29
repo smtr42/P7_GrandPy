@@ -29,11 +29,12 @@ class GoogleRequest:
             req = requests.get(url)
             resp_json = req.json()
             if resp_json["status"] != "INVALID_REQUEST":
-                result["lat"] = resp_json['results'][0]['geometry']['location'][
-                    'lat']
-                result["lon"] = resp_json['results'][0]['geometry']['location'][
-                    'lng']
-                result["address"] = resp_json['results'][0]["formatted_address"]
+                result["lat"] = \
+                    resp_json['results'][0]['geometry']['location']['lat']
+                result["lon"] = \
+                    resp_json['results'][0]['geometry']['location']['lng']
+                result["address"] = resp_json['results'][0][
+                    "formatted_address"]
                 logger.info(f"Return google API result : {result}")
             else:
                 data["error"] = True
@@ -51,13 +52,15 @@ class GoogleRequest:
             logger.error(f"Unknown Error: {err}")
             result["error"] = True
         except IndexError as ie:
-            logger.info(f"No coordinate found : {result}")
+            logger.info(f"No coordinate found : {ie} : {result}")
             result["error"] = True
         result = {**data, **result}
         return result
 
 
 class WikipediaRequest:
+    """ Will handle the request for Mediawiki API."""
+
     # https://www.mediawiki.org/wiki/API:Search#API_documentation
     def _id_geo_request(self, data: dict):
         """Return a random pageid from places around given geo coordinates."""
@@ -97,6 +100,7 @@ class WikipediaRequest:
 
     def api_request(self, data: dict) -> dict:
         """Public method gathering each mediawiki data."""
+
         if data["error"]:
             return data
         else:
@@ -104,11 +108,3 @@ class WikipediaRequest:
             data = self._extract_request(data)
             data = self._url_request(data)
             return data
-
-
-if __name__ == "__main__":
-    r = {"input_loc": "tour eiffel", "lat": 48.85837009999999,
-         "lon": 2.2944813}
-    k = GoogleRequest()
-    print(k.api_request(r))
-

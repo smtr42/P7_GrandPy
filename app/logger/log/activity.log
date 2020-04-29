@@ -1,0 +1,24 @@
+2020-04-29 19:27:41,799 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\views.py', reloading
+2020-04-29 19:27:41,831 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-29 19:27:42,328 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-29 19:27:42,335 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-29 19:27:42,342 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-29 19:28:10,238 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-29 19:28:10,683 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-29 19:28:10,688 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-29 19:28:10,695 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-29 19:30:15,762 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\main.py', reloading
+2020-04-29 19:30:15,790 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-29 19:30:15,959 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\main.py', reloading
+2020-04-29 19:30:15,988 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-29 19:30:16,257 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-29 19:30:16,263 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-29 19:30:16,270 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-29 19:30:16,462 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-29 19:30:16,468 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-29 19:30:16,475 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-29 19:31:52,453 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\.virtualenvs\\P7_GrandPy-K_18Rljj\\lib\\site-packages\\click\\__init__.py', reloading
+2020-04-29 19:31:52,537 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-29 19:31:53,423 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-29 19:31:53,429 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-29 19:31:53,437 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

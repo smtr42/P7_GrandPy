@@ -56,15 +56,15 @@ The goal is to learn about:
 * ![#c5f015](https://bit.ly/2wgCZTL) REST APIs,
 * ![#c5f015](https://bit.ly/2wgCZTL) Test Driven Development,
 * ![#c5f015](https://bit.ly/2wgCZTL) Agile development using Trello,
-* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Flask Framework,
-* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) HTML / CSS,
-* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Javascript & AJAX,
-* ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Heroku PaaS,
+* ![#f03c15](https://bit.ly/2wgCZTL) Flask Framework,
+* ![#f03c15](https://bit.ly/2wgCZTL) HTML / CSS,
+* ![#f03c15](https://bit.ly/2wgCZTL) Javascript & AJAX,
+* ![#f03c15](https://bit.ly/2wgCZTL) Heroku PaaS,
 * ![#c5f015](https://bit.ly/2wgCZTL) Common good practices.
 
 Personal challenges and technical choices :
-* ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Use logging
-* ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Not using Jquery or Bootstrap to learn basics
+* ![#c5f015](https://bit.ly/2wgCZTL) Use logging
+* ![#c5f015](https://bit.ly/2wgCZTL) Not using Jquery or Bootstrap to learn basics
 
 
 ### Functionality
@@ -87,13 +87,18 @@ git clone https://github.com/smtr42/P7_GrandPy.git
 ```sh
 pipenv install
 ```
-### Work in progress
+To use it in local, you must create a *.env* in `app/config/`file where your put your API identifiers like this :
+```.env
+google_api = "your_api_key"
+FRONT_API_KEY = "your_api_key"
+```
+To run the application in local :
+```sh
+python -m main
+```
+Open your webbrowser and go to `http://127.0.0.1:5000/`
 
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) >
-
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) >
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) >
+The application can be used online at https://p7grandpy.herokuapp.com/
 
 ## Links
 * [French Stop Words](https://github.com/6/stopwords-json/blob/master/dist/fr.json)
@@ -108,7 +113,7 @@ pipenv install
 
 ## Authors
 
-* **Simonnet T** - [*Initial work*](https://github.com/smtr42) - [smtr42](https://github.com/smtr42)
+* **Simonnet T** - [smtr42](https://github.com/smtr42)
    
   <a href="https://www.linkedin.com/in/teiva-s/">
    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" alt="linkedin" width="200" height="54">

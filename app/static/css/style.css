@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
-/*#C5DDEB*/
-
 body {
     background: #94C2ED;
     color: #FFF;
@@ -36,8 +34,6 @@ li {
 #map {
     height: 200px;
     width: 100%;
-    /* responsive map*/
-    /*margin-left: calc(-50vw + 50% );*/
 }
 
 .chat-history {
@@ -57,7 +53,6 @@ li {
     padding: 15px 20px;
     font-size: 16px;
     border-radius: 7px;
-    /*margin-bottom: 30px;*/
     width: 90%;
     position: relative;
 }

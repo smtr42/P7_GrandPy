@@ -1,3 +1,4 @@
+"""Handle every other class in models folder"""
 import random as rd
 
 from app.config import config as cfg
@@ -6,6 +7,7 @@ from app.models.parser import Parser
 
 
 class Core:
+    """Main class handling all others classes"""
 
     def __init__(self):
         """ Initialize  each Class used to process the input."""
@@ -36,8 +38,3 @@ class Core:
                   f"{data['url']}"
         data["formatted_message"] = message
         return data
-
-
-if __name__ == '__main__':
-    core = Core()
-    print(core.process("Où se situe la tour Eiffel ?"))
