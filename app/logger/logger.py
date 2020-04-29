@@ -1,9 +1,15 @@
 """Set up a simple logger for the application"""
 import logging
+import os
 from logging.handlers import RotatingFileHandler
 
 
 def setup_logger():
+    fn = "activity.log"
+    try:
+        file = open(fn, 'r')
+    except IOError:
+        file = open(fn, 'w')
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
 
