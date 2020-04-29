@@ -45,9 +45,9 @@ class TestCore:
 
         monkeypatch.setattr(self.core.google_req, "api_request", get_g_mock)
 
-        # monkeypatch.setattr(
-        #     "app.models.core.Core._format_message",
-        #     self.mock_format_message)
+        monkeypatch.setattr(
+            "app.models.core.Core._format_message",
+            self.mock_format_message)
 
         assert self.core.process(text_input) == _format_message_return
 

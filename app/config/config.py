@@ -1,12 +1,25 @@
-from os import getenv
-
+import os
 from dotenv import load_dotenv, find_dotenv
 
 
 def load_key():
-    load_dotenv(find_dotenv())
-    API_KEY = getenv('google_api')
-    return API_KEY
+    try:
+        load_dotenv(find_dotenv())
+        API_KEY = os.getenv('google_api')
+        return API_KEY
+    except:
+        API_KEY = os.environ["GOOGLE_API_KEY"]
+        return API_KEY
+
+
+def load_front_key():
+    try:
+        load_dotenv(find_dotenv())
+        FRONT_API_KEY = os.getenv('FRONT_API_KEY')
+        return FRONT_API_KEY
+    except:
+        FRONT_API_KEY = os.environ["FRONT_API_KEY"]
+        return FRONT_API_KEY
 
 
 STOP_WORD_PATH = "app/data/fr.json"
@@ -63,4 +76,3 @@ STORY_SENTENCE = ["Au fait, je t'ai raconté mon anecdote près de là ? ",
                   "Ah ça me rappel cet endroit pas très loin. ",
                   "Y a cet endroit sympa tout proche de là je me souviens. ",
                   "Oh mais il y a ce lieu à ne pas manquer à deux pas de là. "]
-
