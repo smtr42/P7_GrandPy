@@ -6,3 +6,233 @@
 2020-04-30 14:24:12,853 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
 2020-04-30 14:40:28,316 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
 2020-04-30 14:40:28,317 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:08:59,871 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:09:00,304 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:09:00,313 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:09:00,320 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:09:15,520 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:09:15] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:09:15,564 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:09:15] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2020-04-30 15:09:15,591 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:09:15] "[37mGET /static/js/script.js HTTP/1.1[0m" 200 -
+2020-04-30 15:09:15,592 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:09:15] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+2020-04-30 15:09:39,800 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:09:39,804 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:09:50,954 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyCqErZHC1mA87hEwpDIPiTULuKq9h0V8oI HTTP/1.1" 200 None
+2020-04-30 15:09:50,956 [INFO] | File "api_request.py" in "api_request" line 55: No coordinate found : list index out of range : {'address': None, 'lat': 43.1, 'lon': 6.1}
+2020-04-30 15:09:50,957 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:09:50] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:10:17,674 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\config\\config.py', reloading
+2020-04-30 15:10:17,709 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:10:18,152 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:10:18,157 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:10:18,164 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:10:18,621 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2020-04-30 15:10:18,652 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2020-04-30 15:10:18,660 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2020-04-30 15:10:18,668 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2020-04-30 15:10:18,813 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-04-30 15:10:18,818 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2020-04-30 15:10:18,839 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:18] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2020-04-30 15:10:37,254 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\config\\config.py', reloading
+2020-04-30 15:10:37,286 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:10:37,739 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:10:37,747 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:10:37,755 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:10:39,318 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:39] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:10:48,170 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:10:48,174 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:10:48,284 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyCqErZHC1mA87hEwpDIPiTULuKq9h0V8oI HTTP/1.1" 200 None
+2020-04-30 15:10:48,286 [INFO] | File "api_request.py" in "api_request" line 55: No coordinate found : list index out of range : {'address': None, 'lat': 43.1, 'lon': 6.1}
+2020-04-30 15:10:48,287 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:10:48] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:11:19,639 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:11:19] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:11:27,069 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:11:27,072 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:11:27,175 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyCqErZHC1mA87hEwpDIPiTULuKq9h0V8oI HTTP/1.1" 200 None
+2020-04-30 15:11:27,178 [INFO] | File "api_request.py" in "api_request" line 55: No coordinate found : list index out of range : {'address': None, 'lat': 43.1, 'lon': 6.1}
+2020-04-30 15:11:27,178 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:11:27] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:13:42,351 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:13:42] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:14:22,061 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:14:22] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:14:27,286 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:14:27,289 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:14:38,424 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyCqErZHC1mA87hEwpDIPiTULuKq9h0V8oI HTTP/1.1" 200 None
+2020-04-30 15:14:38,427 [INFO] | File "api_request.py" in "api_request" line 55: No coordinate found : list index out of range : {'address': None, 'lat': 43.1, 'lon': 6.1}
+2020-04-30 15:14:38,428 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:14:38] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:17:20,058 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:17:20,501 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:17:20,507 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:17:20,513 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:17:23,411 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:17:23] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:17:31,813 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:17:31,816 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:17:43,321 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:17:43,324 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:17:43,326 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:17:54,665 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 None
+2020-04-30 15:17:54,670 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:17:54,936 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=2689115&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 429
+2020-04-30 15:17:54,941 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:17:55,197 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=2689115&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 307
+2020-04-30 15:17:55,200 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:17:55] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:18:42,156 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\models\\core.py', reloading
+2020-04-30 15:18:42,197 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:18:42,691 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:18:42,697 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:18:42,705 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:20:17,130 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\models\\core.py', reloading
+2020-04-30 15:20:17,159 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:20:17,618 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:20:17,624 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:20:17,632 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:20:22,041 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:20:22] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:20:29,605 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:20:29,610 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:20:40,799 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:20:40,801 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:20:40,804 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:20:41,113 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 15:20:41,118 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:20:41,444 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=5422039&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 320
+2020-04-30 15:20:41,449 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:20:41,681 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=5422039&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 299
+2020-04-30 15:20:41,684 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:20:41] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:47:11,238 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:47:11] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:47:29,721 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:47:29,724 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:47:41,314 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:47:41,316 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:47:41,318 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:47:52,647 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 15:47:52,651 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:47:52,924 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=1869201&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 306
+2020-04-30 15:47:52,929 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:47:53,191 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=1869201&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 310
+2020-04-30 15:47:53,194 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:47:53] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:48:56,706 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\models\\core.py', reloading
+2020-04-30 15:48:56,744 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 15:48:57,220 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 15:48:57,228 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 15:48:57,235 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 15:53:53,327 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:53:53] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:54:06,905 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:54:06,908 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:54:18,065 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:54:18,067 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:54:18,070 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:30,442 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 None
+2020-04-30 15:54:30,447 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:30,723 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=5422017&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 315
+2020-04-30 15:54:30,728 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:30,962 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=5422017&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 297
+2020-04-30 15:54:30,965 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:54:30] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:54:55,221 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:54:55] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:54:57,441 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:54:57,444 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:54:57,570 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:54:57,573 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:54:57,575 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:57,885 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 None
+2020-04-30 15:54:57,890 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:58,167 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=1869201&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 306
+2020-04-30 15:54:58,171 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:54:58,424 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=1869201&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 310
+2020-04-30 15:54:58,427 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:54:58] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 15:59:02,343 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:59:02] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 15:59:14,650 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 15:59:14,653 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 15:59:25,801 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 15:59:25,804 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 15:59:25,806 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:59:26,104 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 None
+2020-04-30 15:59:26,109 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:59:26,371 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=7488373&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 None
+2020-04-30 15:59:26,375 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 15:59:26,631 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=7488373&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 327
+2020-04-30 15:59:26,634 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 15:59:26] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:00:25,229 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\models\\core.py', reloading
+2020-04-30 16:00:25,262 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 16:00:25,722 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 16:00:25,728 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 16:00:25,735 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-04-30 16:00:26,656 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:00:26] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 16:00:28,662 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:00:28,667 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:00:28,795 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:00:28,797 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:00:28,800 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:00:29,095 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 16:00:29,100 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:00:29,368 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=1869201&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 306
+2020-04-30 16:00:29,373 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:00:29,638 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=1869201&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 310
+2020-04-30 16:00:29,641 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:00:29] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:02:25,996 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:02:25] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 16:02:27,652 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:02:27,655 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:02:27,839 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:02:27,841 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:02:27,843 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:02:28,190 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 None
+2020-04-30 16:02:28,196 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:02:28,523 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=5422039&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 320
+2020-04-30 16:02:28,528 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:02:28,800 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=5422039&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 None
+2020-04-30 16:02:28,803 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:02:28] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:04:42,164 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:04:42,167 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:04:51,719 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:04:51] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 16:04:51,768 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:04:51] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2020-04-30 16:04:51,796 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:04:51] "[37mGET /static/js/script.js HTTP/1.1[0m" 200 -
+2020-04-30 16:04:51,799 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:04:51] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+2020-04-30 16:04:53,885 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:04:53,888 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:04:53,890 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:05,309 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 16:05:05,314 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:05,633 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=4641538&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 372
+2020-04-30 16:05:05,639 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:05,937 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=4641538&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 286
+2020-04-30 16:05:05,940 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:05] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:05:06,394 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:05:06,396 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:05:06,552 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:05:06,554 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:05:06,556 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:06,892 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 16:05:06,898 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:07,217 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=5422039&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 320
+2020-04-30 16:05:07,222 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:07,529 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=5422039&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 299
+2020-04-30 16:05:07,532 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:07] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:05:16,864 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:16] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 16:05:16,898 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:16] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2020-04-30 16:05:16,919 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:16] "[37mGET /static/js/script.js HTTP/1.1[0m" 200 -
+2020-04-30 16:05:16,920 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:16] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+2020-04-30 16:05:23,391 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:05:23,393 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:05:23,571 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:05:23,573 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:05:23,575 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:23,890 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 16:05:23,895 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:24,230 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=1359783&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 None
+2020-04-30 16:05:24,235 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:05:24,517 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=1359783&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 278
+2020-04-30 16:05:24,519 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:05:24] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:06:21,037 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:06:21] "[37mGET / HTTP/1.1[0m" 200 -
+2020-04-30 16:06:21,073 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:06:21] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+2020-04-30 16:06:21,101 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:06:21] "[37mGET /static/img/logo.png HTTP/1.1[0m" 200 -
+2020-04-30 16:06:21,110 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:06:21] "[37mGET /static/js/script.js HTTP/1.1[0m" 200 -
+2020-04-30 16:06:31,892 [INFO] | File "api_request.py" in "api_request" line 28: Handling google API request tour+eiffel
+2020-04-30 16:06:31,895 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): maps.googleapis.com:443
+2020-04-30 16:06:32,040 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://maps.googleapis.com:443 "GET /maps/api/geocode/json?address=tour+eiffel&key=AIzaSyAgSc_D7NtMpEGVmMf7iHx2tpFKQvQJ8uA HTTP/1.1" 200 None
+2020-04-30 16:06:32,042 [INFO] | File "api_request.py" in "api_request" line 38: Return google API result : {'address': 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'lat': 48.85837009999999, 'lon': 2.2944813}
+2020-04-30 16:06:32,045 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:06:32,398 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?format=json&list=geosearch&gscoord=48.8583701%7C2.2944813&gslimit=10&gsradius=10000&action=query HTTP/1.1" 200 481
+2020-04-30 16:06:32,402 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:06:32,941 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&pageids=5422017&prop=extracts&explaintext=true&exsectionformat=plain&exsentences=3&format=json HTTP/1.1" 200 315
+2020-04-30 16:06:32,946 [DEBUG] | File "connectionpool.py" in "_new_conn" line 941: Starting new HTTPS connection (1): fr.wikipedia.org:443
+2020-04-30 16:06:33,285 [DEBUG] | File "connectionpool.py" in "_make_request" line 442: https://fr.wikipedia.org:443 "GET /w/api.php?action=query&prop=info&pageids=5422017&inprop=url%7Ctalkid&format=json HTTP/1.1" 200 297
+2020-04-30 16:06:33,288 [INFO] | File "_internal.py" in "_log" line 113: 127.0.0.1 - - [30/Apr/2020 16:06:33] "[37mPOST /ajax HTTP/1.1[0m" 200 -
+2020-04-30 16:07:16,950 [INFO] | File "_internal.py" in "_log" line 113:  * Detected change in 'C:\\Users\\X370\\projects\\P7_GrandPy\\app\\models\\core.py', reloading
+2020-04-30 16:07:16,983 [INFO] | File "_internal.py" in "_log" line 113:  * Restarting with stat
+2020-04-30 16:07:17,452 [WARNING] | File "_internal.py" in "_log" line 113:  * Debugger is active!
+2020-04-30 16:07:17,458 [INFO] | File "_internal.py" in "_log" line 113:  * Debugger PIN: 762-585-039
+2020-04-30 16:07:17,465 [INFO] | File "_internal.py" in "_log" line 113:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

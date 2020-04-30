@@ -8,7 +8,11 @@ def load_key():
 
     load_dotenv(find_dotenv())
     API_KEY = os.getenv('GOOGLE_API_KEY')
-    return API_KEY
+    if API_KEY is None:
+        API_KEY = os.environ["GOOGLE_API_KEY"]
+        return API_KEY
+    else:
+        return API_KEY
 
 
 def load_front_key():
@@ -17,7 +21,11 @@ def load_front_key():
 
     load_dotenv(find_dotenv())
     FRONT_API_KEY = os.getenv('FRONT_API_KEY')
-    return FRONT_API_KEY
+    if FRONT_API_KEY is None:
+        FRONT_API_KEY = os.environ["FRONT_API_KEY"]
+        return FRONT_API_KEY
+    else:
+        return FRONT_API_KEY
 
 
 STOP_WORD_PATH = "app/data/fr.json"

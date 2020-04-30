@@ -1,5 +1,6 @@
 let form = document.querySelector("#user-form");
 let chatHistory = document.querySelector('.chat-history')
+let mess = document.querySelector(".chat-history")
 let body = document.querySelector('body')
 let map;
 
@@ -11,13 +12,7 @@ function initMap(lat = 43.397, lng = -4.644) {
     });
 }
 
-/**
- * Handle the creation of html blocs with relevant data
- * @param user : tells if grandpy or user
- * @param text : what to write in the message
- */
-
-function writeLine(user, text) {
+function writeLine(user, text, url) {
     let head = document.createElement("div")
     let message = document.createElement("div")
     head.classList.add("message-head")
@@ -29,15 +24,27 @@ function writeLine(user, text) {
     message.appendChild(messageText)
     chatHistory.appendChild(head)
     chatHistory.appendChild(message)
+    if (user == "grand") {
+        let a = document.createElement('a')
+        let link = document.createTextNode("Lien")
+        a.appendChild(link)
+        a.title = "Lien"
+        a.href = url
+        mess.appendChild(a)
+    }
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-/**
- *
- * @param url : the url for the flask view
- * @param data :
- * @returns {Promise<any | void>}
- */
+function linker (url) {
+    let a = document.createElement('a');
+    let link = document.createTextNode("Lien");
+    a.appendChild(link);
+    a.title = "Lien";
+    a.href = url;
+    return a;
+}
+
+
 function postFormData(url, data) {
     return fetch(url, {
         method: "POST",
@@ -54,13 +61,13 @@ form.addEventListener("submit", function (event) {
 
         .then(function(response) {
             console.log(response)
-            writeLine("me", response.input_raw)
+            writeLine("me", response.input_raw, "")
             if (response.error) {
-                writeLine("grand", response.no_result)
+                writeLine("grand", response.no_result, "")
             } else {
-                writeLine("grand", response.formatted_message)
+                writeLine("grand", response.formatted_message, response.url)
+                writeline("grand", `<a href='${response.url}'>En savoir plus sur Wikipedia</a>`)
             }
-            // writeLine("grand", response.formatted_message)
             let latitude = response.lat
             let longitude = response.lon
             body.classList.remove('wait')
