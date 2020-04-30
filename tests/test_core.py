@@ -19,9 +19,6 @@ class TestCore:
     def setup_method(self):
         self.core = Core()
 
-    def mock_parser(self):
-        pass
-
     def mock_format_message(self, data, *args, **kwargs):
         message = f"Très bonne question, l'adresse est ici :" \
                   f" {data['address']}. \n" \

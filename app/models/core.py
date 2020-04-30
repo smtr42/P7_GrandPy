@@ -31,10 +31,10 @@ class Core:
 
         start = rd.choice(cfg.START_SENTENCE)
         story = rd.choice(cfg.STORY_SENTENCE)
-        message = f"{start}{data['address']}. \n" \
-                  f"{story} \n" \
-                  f"{data['page_id_article']}. \n" \
-                  f"Pour en savoir plus visite ce lien :) \n" \
-                  f"{data['url']}"
+        message = (f"{start}{data['address']}. \n"
+                  f"{story} \n"
+                  f"{data['page_id_article']}. \n"
+                  "Pour en savoir plus visite ce lien :) \n"
+                  f"{data['url']}")
         data["formatted_message"] = message
         return data

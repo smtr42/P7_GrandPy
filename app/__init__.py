@@ -1,6 +1,6 @@
 """ Initialization of Flask"""
 
-from flask import Flask, render_template, jsonify, request
+from flask import Flask
 
 flask_app = Flask(__name__)
 

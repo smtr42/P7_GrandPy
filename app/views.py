@@ -1,7 +1,10 @@
 """Main views for the flask app."""
-from app import flask_app, render_template, jsonify, request
-from app.models.core import Core
+
+from flask import render_template, jsonify, request
+
+from app import flask_app
 from app.config import config as cfg
+from app.models.core import Core
 
 
 @flask_app.route('/')

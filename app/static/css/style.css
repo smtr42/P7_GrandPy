@@ -21,8 +21,6 @@ li {
 .chat {
     min-width: 500px;
     max-width: 960px;
-    /* responsive map*/
-    /*margin: 0 auto;*/
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -43,6 +41,8 @@ li {
     height: 350px;
 }
 
+
+
 .message-head {
     margin-bottom: 5px;
     text-align: left;
@@ -62,7 +62,8 @@ li {
 }
 
 .grand {
-    background: #94c2ed;
+    /*background: #94c2ed;*/
+    background: #3383FF;
 }
 
 .question-box {
@@ -83,7 +84,6 @@ textarea {
 
 .message-content {
     position: relative;
-
     width: 95%;
     height: 50px;
     margin: 0 auto;

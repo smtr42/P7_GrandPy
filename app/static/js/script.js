@@ -11,6 +11,12 @@ function initMap(lat = 43.397, lng = -4.644) {
     });
 }
 
+/**
+ * Handle the creation of html blocs with relevant data
+ * @param user : tells if grandpy or user
+ * @param text : what to write in the message
+ */
+
 function writeLine(user, text) {
     let head = document.createElement("div")
     let message = document.createElement("div")
@@ -26,7 +32,12 @@ function writeLine(user, text) {
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-
+/**
+ *
+ * @param url : the url for the flask view
+ * @param data :
+ * @returns {Promise<any | void>}
+ */
 function postFormData(url, data) {
     return fetch(url, {
         method: "POST",
