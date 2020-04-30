@@ -60,13 +60,11 @@ form.addEventListener("submit", function (event) {
     postFormData("/ajax", new FormData(form))
 
         .then(function(response) {
-            console.log(response)
             writeLine("me", response.input_raw, "")
             if (response.error) {
                 writeLine("grand", response.no_result, "")
             } else {
                 writeLine("grand", response.formatted_message, response.url)
-                writeline("grand", `<a href='${response.url}'>En savoir plus sur Wikipedia</a>`)
             }
             let latitude = response.lat
             let longitude = response.lon
