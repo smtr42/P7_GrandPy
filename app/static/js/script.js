@@ -12,6 +12,7 @@ function initMap(lat = 43.397, lng = -4.644) {
     });
 }
 
+
 function writeLine(user, text, url) {
     let head = document.createElement("div")
     let message = document.createElement("div")
@@ -35,15 +36,6 @@ function writeLine(user, text, url) {
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-function linker (url) {
-    let a = document.createElement('a');
-    let link = document.createTextNode("Lien");
-    a.appendChild(link);
-    a.title = "Lien";
-    a.href = url;
-    return a;
-}
-
 
 function postFormData(url, data) {
     return fetch(url, {
@@ -53,6 +45,7 @@ function postFormData(url, data) {
         .then(response => response.json())
         .catch(error => console.log(error));
 }
+
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
